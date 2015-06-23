@@ -1,0 +1,25 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+          xmlns="http://www.w3.org/1999/xhtml"
+          xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:output omit-xml-declaration="true"/>
+    <jsp:directive.page pageEncoding="UTF-8" contentType="text/html; UTF-8"/>
+    <spring:url var="authUrl" value="/j_spring_security_check" />
+    <form method="post" class="signin" action="${authUrl}">
+        <fieldset>
+            <table cellspacing="0"><tr>
+                    <th><label for="username_or_email">Username or Email</label></th>
+                    <td><input id="username_or_email" name="j_username"
+                               type="text"/> <!-- Поле ввода имени пользователя -->
+                    </td></tr>
+                <tr><th><label for="password">Password</label></th>
+                    <td><input id="password" name="j_password"
+                               type="password"/> <!-- Поле ввода пароля -->
+                        <small><a href="/user/resend_password">Forgot?</a></small>
+                    </td></tr>
+            </table>
+        </fieldset>
+    </form>
+</jsp:root>
+
+
+

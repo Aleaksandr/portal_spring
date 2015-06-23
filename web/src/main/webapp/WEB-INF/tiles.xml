@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+    <definition name="default" template="/WEB-INF/view/layouts/default.jsp">
+        <put-attribute name="title" value=""/>
+        <put-attribute name="header" value="/WEB-INF/view/common/header.jsp"/>
+        <put-attribute name="body" value=""/>
+        <put-attribute name="footer" value="/WEB-INF/view/common/footer.jsp"/>
+    </definition>
+
+    <definition name="welcome" extends="default">
+        <put-attribute name="title" value="Welcome user"/>
+        <put-attribute name="body" value="/WEB-INF/view/welcome/welcome.jspx"/>
+    </definition>
+
+    <definition name="user/main" extends="default">
+        <put-attribute name="title" value="Main page"/>
+        <put-attribute name="body" value="/WEB-INF/view/user/main.jspx"/>
+    </definition>
+
+    <definition name="portal/main" extends="default">
+        <put-attribute name="title" value="page.title"/>
+        <put-attribute name="body" value="/WEB-INF/view/person/main.jsp"/>
+    </definition>
+
+    <definition name="/news/addnewsform" extends="default">
+        <put-attribute name="title" value="add News"/>
+        <put-attribute name="body" value="/WEB-INF/view/news/addnews.jsp"/>
+    </definition>
+
+    <definition name="login" extends="default">
+        <put-attribute name="title" value="Login page"/>
+        <put-attribute name="body" value="/WEB-INF/view/user/login.jsp"/>
+    </definition>
+
+    <definition name="error" extends="default">
+        <put-attribute name="title" value="Error page"/>
+        <put-attribute name="body" value="/WEB-INF/view/user/error.jsp"/>
+    </definition>
+
+    <definition name="index" extends="default">
+        <put-attribute name="title" value="Index page"/>
+        <put-attribute name="body" value="/WEB-INF/view/welcome/index.jsp"/>
+    </definition>
+
+</tiles-definitions>
+
